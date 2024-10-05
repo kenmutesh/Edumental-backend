@@ -18,3 +18,4 @@ Route::post('/auth/logout', [AuthenticateController::class, 'logout'])->name('lo
 // User Management
 Route::get('/users', [UserController::class, 'index'])->name('users');
 Route::get('/user/{user}', [UserController::class, 'show'])->name('user.show');
+Route::put('/user/{user}', [UserController::class, 'update'])->name('user.update');

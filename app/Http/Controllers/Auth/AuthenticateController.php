@@ -75,6 +75,8 @@ class AuthenticateController extends Controller
             Log::info('Tokens before logout', [
                 'tokens' => $user->tokens,
             ]);
+            $user->tokens()->delete();
+
 
             $request->user()->currentAccessToken()->delete();
 
