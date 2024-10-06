@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthenticateController;
+use App\Http\Controllers\Roles\RoleController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -19,3 +20,7 @@ Route::post('/auth/logout', [AuthenticateController::class, 'logout'])->name('lo
 Route::get('/users', [UserController::class, 'index'])->name('users');
 Route::get('/user/{user}', [UserController::class, 'show'])->name('user.show');
 Route::put('/user/{user}', [UserController::class, 'update'])->name('user.update');
+
+
+// Rolw management
+Route::get('roles', [RoleController::class, 'index']);
