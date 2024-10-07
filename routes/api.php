@@ -24,3 +24,4 @@ Route::put('/user/{user}', [UserController::class, 'update'])->name('user.update
 
 // Rolw management
 Route::get('roles', [RoleController::class, 'index']);
+Route::post('roles', [RoleController::class, 'store']);
